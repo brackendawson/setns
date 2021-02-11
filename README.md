@@ -10,12 +10,11 @@ $ make
 ### Install it
 Load it into bash either once or in your .bashrc:
 ```
-$ sudo -s
-# enable -f ./setns.so setns
+$ enable -f ./setns.so setns
 ```
 
 ### Use it.
-For example, you can take your Ubuntu's bash into an Alpine container's filesystem:
+For example, you can take your Ubuntu's bash into an Alpine container's filesystem (as root):
 ```
 # cat /etc/lsb-release 
 DISTRIB_ID=Ubuntu
