@@ -6,13 +6,13 @@ extern int setns ();
 
 int setns_main(int argc, char **argv) {
     if (argc != 2) {
-        write(2, "Usage TODO\n", 11);
+        write(2, "Usage: setns <namspace>\n", 24);
         return 2;
     }
     int fd, r;
     fd = open(argv[1], O_RDONLY);
     if (fd < 0) {
-        write(2, "Can't open\n", 11);
+        write(2, "Can't open namespace\n", 21);
         return 1;
     }
     r = setns(fd, 0);
@@ -35,7 +35,10 @@ int setns_builtin(WORD_LIST *list) {
 }
 
 char *setns_doc[] = {
-    "TODO",
+    "Set Linux namespaces.",
+    "",
+    "Change the current bash process's namesapces.",
+    "Example: setns /proc/12345/ns/mnt",
     (char)0
 };
 
