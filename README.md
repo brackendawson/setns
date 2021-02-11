@@ -27,3 +27,6 @@ DISTRIB_DESCRIPTION="Ubuntu 20.04.2 LTS"
 # cat /etc/alpine-release 
 3.13.1
 ```
+
+### Why?
+With appropriate other bash builtins (like ls and cat), you can now browse inside a container that's FROM scratch.
